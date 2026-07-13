@@ -30,4 +30,4 @@ Live and in active use by the client. Currently using AI-generated imagery while
 
 ## Author
 
-Built by [Rahul P.R](https://github.com/7r7h7l7) — self-taught web developer based in Kerala, India.
+Built by [Rahul P.R](https://github.com/7r7h7l7) — self-taught web developer based in kottakkal, kerala.
