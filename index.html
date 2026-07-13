@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- theme-color moved above the blocking script so it can be updated synchronously -->
+    <meta name="theme-color" content="#FDF8F0" id="theme-color-meta" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+          var meta = document.getElementById("theme-color-meta");
+          if (meta)
+            meta.setAttribute(
+              "content",
+              theme === "dark" ? "#1A1A1A" : "#FDF8F0",
+            );
+        } catch (e) {
+          /* localStorage/matchMedia unavailable – default markup already has data-theme="light" */
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOKVET Pet Clinic | Compassionate Care in Kottakkal</title>
+    <meta
+      name="description"
+      content="DOKVET Pet Clinic — top‑quality veterinary care in Kottakkal. Consultations, vaccinations, grooming, surgery & pet essentials. Open daily 10–6. Book on WhatsApp."
+    />
+    <meta property="og:title" content="DOKVET Pet Clinic" />
+    <meta
+      property="og:description"
+      content="Compassionate veterinary care in Kottakkal. Book on WhatsApp."
+    />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://example.com" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "DOKVET Pet Clinic",
+        "description": "Top‑quality veterinary care in Kottakkal — consultations, vaccinations, grooming, surgery & pet essentials.",
+        "telephone": "+919656681000",
+        "url": "https://example.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Near Rajahs HSS, Thokkampara - Kottappadi Rd, Kottakkal",
+          "addressLocality": "Kottakkal",
+          "addressRegion": "Kerala",
+          "postalCode": "676503"
+        },
+        "openingHours": "Mo-Su 10:00-18:00"
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet"
+    /></noscript>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="site-header">
+      <a href="#" class="logo">DOK<span>VET</span></a>
+      <nav aria-label="Main">
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <span class="menu-icon"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pet-essentials">Pet Essentials</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="menu-theme-toggle">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Switch to dark mode"
+            >
+              <span class="theme-icon">🌙</span>
+            </button>
+          </li>
+          <li><a href="#booking-form" class="btn-cta">Book Now</a></li>
+        </ul>
+        <div class="menu-backdrop" id="menu-backdrop"></div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="home">
+        <div class="hero__content">
+          <div class="hero__badge reveal-fade-left" data-reveal>
+            Kottakkal's Trusted Veterinary Clinic & Grooming Centre
+          </div>
+          <h1 class="hero__title reveal-fade-up" data-reveal>
+            Exceptional care for your <span>best friend</span>
+          </h1>
+          <p
+            class="hero__subtitle reveal-fade-up"
+            data-reveal
+            style="--stagger: 100ms"
+          >
+            From routine checkups and vaccinations to grooming and emergency
+            care, we treat every pet with medical expertise, genuine compassion,
+            and the attention we'd give our own.
+          </p>
+          <div data-reveal class="reveal-fade-up" style="--stagger: 200ms">
+            <a href="#booking-form" class="btn btn--primary"
+              >Book an appointment ↓</a
+            >
+          </div>
+        </div>
+        <div class="hero__visual reveal-scale" data-reveal>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="images/clinic_pic-640.webp 640w, images/clinic_pic-1200.webp 1200w"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+            <img
+              src="images/clinic_pic.jpg"
+              alt="DOKVET clinic"
+              width="1408"
+              height="768"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="trust-section" id="trust">
+        <h2 class="trust-section__heading reveal-fade-up" data-reveal>
+          Trusted by Pet Families Across Kottakkal
+        </h2>
+        <p
+          class="trust-section__sub reveal-fade-up"
+          data-reveal
+          style="--stagger: 80ms"
+        >
+          Delivering compassionate veterinary care, professional grooming, and
+          trusted pet healthcare for families across Kottakkal.
+        </p>
+        <div class="trust-counters" id="trustCounters">
+          <div class="counter-col">
+            <div class="counter-number-wrap">
+              <span
+                class="counter-number"
+                data-base-year="2026"
+                data-base-count="8000"
+                data-yearly-increment="2000"
+                data-suffix="+"
+                >0+</span
+              >
+            </div>
+            <span class="counter-label">Pets Cared For</span>
+          </div>
+          <div class="counter-col">
+            <div class="counter-number-wrap">
+              <span
+                class="counter-number"
+                data-founding-year="2022"
+                data-suffix="+"
+                >0+</span
+              >
+            </div>
+            <span class="counter-label">Years Serving Families</span>
+          </div>
+          <div class="counter-col">
+            <div class="counter-number-wrap">
+              <span class="counter-number" data-count="7" data-suffix="">0</span
+              ><span class="counter-static-text"> Days</span>
+            </div>
+            <span class="counter-label">Open Every Week</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-section" id="why">
+        <div class="why-wrapper">
+          <div class="why-content">
+            <h2 class="section__title reveal-fade-left" data-reveal>
+              Why Families Choose DOKVET
+            </h2>
+            <p
+              class="section__subtitle reveal-fade-up"
+              data-reveal
+              style="max-width: 600px; margin-bottom: var(--space-32)"
+            >
+              Trusted veterinary care with compassionate professionals dedicated
+              to keeping your pets healthy, happy, and thriving.
+            </p>
+          </div>
+          <div class="why-features-row">
+            <div
+              class="feature-list reveal-fade-up"
+              data-reveal
+              style="--stagger: 100ms"
+            >
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M5.3 20c1.6-4.2 5.6-7 10.7-7 5 0 9 2.8 10.7 7" />
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Experienced Veterinary Team</h3>
+                  <p>
+                    Our skilled veterinarians bring years of hands‑on
+                    experience, treating every pet with the same warmth and
+                    attention they'd give their own.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8" />
+                    <path d="M12 17v4" />
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Modern Diagnostic Facilities</h3>
+                  <p>
+                    In‑house laboratory, digital X‑ray, and ultrasound equipment
+                    deliver fast, accurate results — so your pet gets the right
+                    treatment without delay.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Complete Pet Care Under One Roof</h3>
+                  <p>
+                    From preventive healthcare and surgery to grooming and
+                    premium pet essentials, we're the only destination your pet
+                    ever needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="why-image reveal-scale" data-reveal>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/clinic_team-600.webp 600w, images/clinic_team-1000.webp 1000w"
+                  sizes="(min-width: 992px) 45vw, 100vw"
+                />
+                <img
+                  src="images/clinic_team.jpg"
+                  alt="DOKVET clinic team"
+                  width="1408"
+                  height="768"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <h2 class="section__title reveal-fade-left" data-reveal>
+          Our Services
+        </h2>
+        <p class="section__subtitle reveal-fade-up" data-reveal>
+          Everything your pet needs—from preventive healthcare to advanced
+          diagnostics and professional grooming—all under one roof.
+        </p>
+        <div class="service-row reveal-clip" data-reveal>
+          <h3 class="service-row__title--mobile">Consultation</h3>
+          <div class="service-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/consultation-600.webp 600w, images/consultation-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/consultation.jpg"
+                alt="Consultation"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-row__content">
+            <h3 class="service-row__title service-row__title--desktop">
+              Consultation
+            </h3>
+            <p class="service-row__desc">
+              Comprehensive veterinary consultations for accurate diagnosis,
+              preventive care, and personalized treatment plans tailored to your
+              pet's health.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+        <div class="service-row reveal-clip" data-reveal>
+          <h3 class="service-row__title--mobile">Vaccination</h3>
+          <div class="service-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/vaccination-600.webp 600w, images/vaccination-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/vaccination.jpg"
+                alt="Vaccination"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-row__content">
+            <h3 class="service-row__title service-row__title--desktop">
+              Vaccination
+            </h3>
+            <p class="service-row__desc">
+              Essential vaccinations that protect dogs and cats against
+              preventable diseases and support lifelong health and wellbeing.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+        <div class="service-row reveal-clip" data-reveal>
+          <h3 class="service-row__title--mobile">Grooming</h3>
+          <div class="service-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/petgrooming-600.webp 600w, images/petgrooming-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/petgrooming.jpg"
+                alt="Grooming"
+                width="1408"
+                height="768"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-row__content">
+            <h3 class="service-row__title service-row__title--desktop">
+              Grooming
+            </h3>
+            <p class="service-row__desc">
+              Professional pet grooming services that promote hygiene, comfort,
+              healthy skin, and a clean, well-groomed appearance.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+        <div class="service-row reveal-clip" data-reveal>
+          <h3 class="service-row__title--mobile">Surgery</h3>
+          <div class="service-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/surgery-suite-600.webp 600w, images/surgery-suite-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/surgery-suite-fallback.jpg"
+                alt="Surgery"
+                width="1408"
+                height="768"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-row__content">
+            <h3 class="service-row__title service-row__title--desktop">
+              Surgery
+            </h3>
+            <p class="service-row__desc">
+              Safe veterinary surgical procedures performed with modern
+              techniques, precision, and compassionate care for the best
+              possible outcomes.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+        <div class="service-row reveal-clip" data-reveal>
+          <h3 class="service-row__title--mobile">Laboratory</h3>
+          <div class="service-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/laboratory-600.webp 600w, images/laboratory-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/laboratory.jpg"
+                alt="Laboratory"
+                width="1408"
+                height="768"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-row__content">
+            <h3 class="service-row__title service-row__title--desktop">
+              Laboratory
+            </h3>
+            <p class="service-row__desc">
+              In-house veterinary laboratory diagnostics providing fast,
+              accurate test results to support effective treatment decisions.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+        <div class="service-row reveal-clip" data-reveal>
+          <h3 class="service-row__title--mobile">Ultrasound Scanning</h3>
+          <div class="service-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/ultrasoundscanning-600.webp 600w, images/ultrasoundscanning-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/ultrasoundscanning.jpg"
+                alt="Ultrasound Scanning"
+                width="1408"
+                height="768"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-row__content">
+            <h3 class="service-row__title service-row__title--desktop">
+              Ultrasound Scanning
+            </h3>
+            <p class="service-row__desc">
+              Advanced veterinary ultrasound imaging for accurate diagnosis,
+              pregnancy monitoring, and comprehensive internal health
+              assessments.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section bg-surface pet-essentials-section"
+        id="pet-essentials"
+      >
+        <div class="section__badge reveal-fade-left" data-reveal>
+          Vet Recommended
+        </div>
+        <h2 class="section__title reveal-fade-left" data-reveal>
+          Pet Essentials
+        </h2>
+        <p
+          class="section__subtitle essentials-intro reveal-fade-up"
+          data-reveal
+        >
+          Vet-approved medicines, premium nutrition, grooming essentials, toys,
+          and everything your pet needs—all in one place. Thoughtfully selected
+          by our veterinary team for your pet's health and wellbeing.
+        </p>
+
+        <!-- Card 1: Image on LEFT, text on RIGHT -->
+        <div class="essentials-row reveal-clip" data-reveal>
+          <h3 class="essentials-row__title--mobile">Veterinary Medicines</h3>
+          <div class="essentials-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/medicines-600.webp 600w, images/medicines-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/medicines.jpg"
+                alt="Veterinary Medicines"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="essentials-row__content">
+            <h3 class="essentials-row__title essentials-row__title--desktop">
+              Veterinary Medicines
+            </h3>
+            <p class="essentials-row__desc">
+              Prescription and everyday veterinary medicines recommended by our
+              experienced veterinarians to support your pet's health, recovery,
+              and long-term wellbeing.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Image on RIGHT, text on LEFT -->
+        <div
+          class="essentials-row reveal-clip essentials-row--reverse"
+          data-reveal
+        >
+          <h3 class="essentials-row__title--mobile">Premium Food & Treats</h3>
+          <div class="essentials-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/premiumfood-600.webp 600w, images/premiumfood-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/premiumfood.jpg"
+                alt="Premium Pet Food"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="essentials-row__content">
+            <h3 class="essentials-row__title essentials-row__title--desktop">
+              Premium Food & Treats
+            </h3>
+            <p class="essentials-row__desc">
+              Veterinarian‑approved nutrition, wholesome treats, and
+              special‑diet support for pets at every stage of life.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Image on LEFT, text on RIGHT -->
+        <div class="essentials-row reveal-clip" data-reveal>
+          <h3 class="essentials-row__title--mobile">Toys & Accessories</h3>
+          <div class="essentials-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/petaccessories-600.webp 600w, images/petaccessories-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/petaccessories.jpg"
+                alt="Toys & Accessories"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="essentials-row__content">
+            <h3 class="essentials-row__title essentials-row__title--desktop">
+              Toys & Accessories
+            </h3>
+            <p class="essentials-row__desc">
+              Interactive toys, collars, leashes, harnesses, bowls, and everyday
+              accessories designed for comfort, safety, and enrichment.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Image on RIGHT, text on LEFT -->
+        <div
+          class="essentials-row reveal-clip essentials-row--reverse"
+          data-reveal
+        >
+          <h3 class="essentials-row__title--mobile">Grooming & Daily Care</h3>
+          <div class="essentials-row__media">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/grooming-600.webp 600w, images/grooming-1000.webp 1000w"
+                sizes="(min-width: 768px) 42vw, 100vw"
+              />
+              <img
+                src="images/grooming.jpg"
+                alt="Grooming Essentials"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="essentials-row__content">
+            <h3 class="essentials-row__title essentials-row__title--desktop">
+              Grooming & Daily Care
+            </h3>
+            <p class="essentials-row__desc">
+              Premium grooming products and everyday hygiene essentials to keep
+              your pet looking and feeling their best.
+            </p>
+            <a href="#booking-form" class="btn btn--outline">Book now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-surface" id="testimonials">
+        <h2 class="section__title reveal-fade-left" data-reveal>
+          What Pet Owners Say
+        </h2>
+        <div class="testimonial-carousel">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Very good experience… My dog Rocky was suffering from tick
+                  fever, and because of timely treatment his life was saved.
+                  Special thanks to Dr. Majida for her kind care and patience."
+                </p>
+                <strong class="testimonial-author">— Ajith Ponnarath</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "One of the best pet clinics in Kottakkal. The doctor is
+                  knowledgeable, caring, and gives clear explanations. Staff are
+                  supportive, clinic is clean and well organised."
+                </p>
+                <strong class="testimonial-author">— Muhammed Siraj</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Very rare to see such good pet clinics in Malappuram. The
+                  pets are cared very well, doctors and staff are friendly. My
+                  pet got cured quickly."
+                </p>
+                <strong class="testimonial-author">— Shaima Razak</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Our cat was diagnosed with parvo and was serious. Quick and
+                  proper treatment saved our cat's life. Thankful for the
+                  dedication and care."
+                </p>
+                <strong class="testimonial-author">— Haseen Ponnani</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Went there with a newborn kitten found on street. Dr. Majida
+                  and assistants attended and took care very nicely. Huge
+                  respect."
+                </p>
+                <strong class="testimonial-author">— Ammar Abdullah</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "One of the best and most advanced veterinary clinics around
+                  Kottakkal, Chemmad and surrounding places. They have more than
+                  one doctor and nurses. Timings are wide so we can consult even
+                  after working hours."
+                </p>
+                <strong class="testimonial-author">— Muhammed Ikleel</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Best Service in the Town, Appreciating the employees and Doc
+                  for the treatment for my Pet Cat, Thank you."
+                </p>
+                <strong class="testimonial-author">— Habeeb Rahman</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "You have been the most amazing vet and friend a person could
+                  ask for..!! Thankuu for the caring to my 4 legged buddy on his
+                  sudden problem with leg.!!"
+                </p>
+                <strong class="testimonial-author">— Deepak Divakaran</strong>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "You deserve the full star rating. You explained me the
+                  details about the course and helped me to understand caring
+                  details in depth. You will be on my favourite list always."
+                </p>
+                <strong class="testimonial-author"
+                  >— Muhammed Ashiq Koduvaparamban</strong
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <h2 class="section__title reveal-fade-left" data-reveal>
+          Take a Look Around Our Clinic
+        </h2>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal-scale" data-reveal tabindex="0">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/reception-500.webp 500w, images/reception-800.webp 800w"
+                sizes="(min-width: 768px) 33vw, (min-width: 600px) 50vw, 100vw"
+              />
+              <img
+                src="./images/reception.jpg"
+                alt="Reception"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+            <div class="gallery-caption">Warm welcome</div>
+          </div>
+          <div
+            class="gallery-item reveal-scale"
+            data-reveal
+            tabindex="0"
+            style="--stagger: 80ms"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/examination-500.webp 500w, images/examination-800.webp 800w"
+                sizes="(min-width: 768px) 33vw, (min-width: 600px) 50vw, 100vw"
+              />
+              <img
+                src="./images/examination.jpg"
+                alt="Exam room"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+            <div class="gallery-caption">Modern exam suite</div>
+          </div>
+          <div
+            class="gallery-item reveal-scale"
+            data-reveal
+            tabindex="0"
+            style="--stagger: 160ms"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/surgery-500.webp 500w, images/surgery-800.webp 800w"
+                sizes="(min-width: 768px) 33vw, (min-width: 600px) 50vw, 100vw"
+              />
+              <img
+                src="./images/surgery.jpg"
+                alt="Surgery"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+            <div class="gallery-caption">Sterile OT</div>
+          </div>
+          <div class="gallery-item reveal-scale" data-reveal tabindex="0">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/dentalstation-500.webp 500w, images/dentalstation-800.webp 800w"
+                sizes="(min-width: 768px) 33vw, (min-width: 600px) 50vw, 100vw"
+              />
+              <img
+                src="./images/dentalstation.jpg"
+                alt="Dental station"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+            <div class="gallery-caption">Dental care</div>
+          </div>
+          <div
+            class="gallery-item reveal-scale"
+            data-reveal
+            tabindex="0"
+            style="--stagger: 80ms"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/lab-500.webp 500w, images/lab-800.webp 800w"
+                sizes="(min-width: 768px) 33vw, (min-width: 600px) 50vw, 100vw"
+              />
+              <img
+                src="./images/lab.jpg"
+                alt="Lab"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+            <div class="gallery-caption">In‑house lab</div>
+          </div>
+          <div
+            class="gallery-item reveal-scale"
+            data-reveal
+            tabindex="0"
+            style="--stagger: 160ms"
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/waitingarea-500.webp 500w, images/waitingarea-800.webp 800w"
+                sizes="(min-width: 768px) 33vw, (min-width: 600px) 50vw, 100vw"
+              />
+              <img
+                src="./images/waitingarea.jpg"
+                alt="Waiting area"
+                width="1184"
+                height="864"
+                loading="lazy"
+              />
+            </picture>
+            <div class="gallery-caption">Cozy waiting area</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-card reveal-scale" data-reveal>
+          <h2 class="contact-card__title">Get In Touch</h2>
+          <p class="contact-card__subtitle">
+            Visit our clinic or book an appointment online — we'd love to care
+            for your pet.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-column">
+              <div class="contact-info-card">
+                <h3 class="contact-info__heading">Visit Our Clinic</h3>
+                <div class="contact-info-list">
+                  <div class="contact-detail">
+                    <span class="contact-detail__badge">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                        />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </span>
+                    <span
+                      >Near Rajahs HSS, Thokkampara - Kottappadi Rd,<br />Kottakkal,
+                      676503</span
+                    >
+                  </div>
+                  <div class="contact-detail">
+                    <span class="contact-detail__badge">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                        />
+                      </svg>
+                    </span>
+                    <a href="tel:+919656681000">96566 81000</a>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="contact-detail__badge">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                        />
+                        <polyline points="22,6 12,13 2,6" />
+                      </svg>
+                    </span>
+                    <a href="mailto:dokvetclinic@gmail.com"
+                      >dokvetclinic@gmail.com</a
+                    >
+                  </div>
+                  <div class="contact-detail">
+                    <span class="contact-detail__badge">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                    </span>
+                    <span>Monday – Sunday<br />10:00 AM – 6:00 PM</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-map--stretch">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13188.237426953156!2d75.9901500848539!3d10.992406907144856!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b54547e7fda1%3A0xbb883d4495725394!2sDokvet%20Pet%20Clinic%20%26%20Grooming%20Parlour!5e0!3m2!1sen!2sin!4v1783050730952!5m2!1sen!2sin"
+                  title="Map showing DOKVET Pet Clinic & Grooming Parlour location in Kottakkal"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="contact-column">
+              <div class="booking-form--stretch" id="booking-form">
+                <h3 class="booking-form__heading">Book an Appointment</h3>
+                <form id="contactForm" novalidate>
+                  <div class="form-fields">
+                    <div class="form-group">
+                      <label for="ownerName">Owner Name</label>
+                      <input
+                        type="text"
+                        id="ownerName"
+                        required
+                        placeholder="Jane Smith"
+                        autocomplete="name"
+                        aria-describedby="nameError"
+                        aria-invalid="false"
+                      />
+                      <div
+                        class="form-error"
+                        id="nameError"
+                        aria-live="polite"
+                      ></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="petName">Pet Name</label>
+                      <input
+                        type="text"
+                        id="petName"
+                        required
+                        placeholder="Buddy"
+                        aria-describedby="petError"
+                        aria-invalid="false"
+                      />
+                      <div
+                        class="form-error"
+                        id="petError"
+                        aria-live="polite"
+                      ></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone Number</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        required
+                        placeholder="9876543210"
+                        autocomplete="tel"
+                        aria-describedby="phoneError"
+                        aria-invalid="false"
+                      />
+                      <div
+                        class="form-error"
+                        id="phoneError"
+                        aria-live="polite"
+                      ></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="service">Service Needed</label>
+                      <select
+                        id="service"
+                        required
+                        aria-describedby="serviceError"
+                        aria-invalid="false"
+                      >
+                        <option value="">-- Select --</option>
+                        <option>Consultation</option>
+                        <option>Vaccination</option>
+                        <option>Grooming</option>
+                        <option>Surgery</option>
+                        <option>Laboratory</option>
+                        <option>Ultrasound Scanning</option>
+                      </select>
+                      <div
+                        class="form-error"
+                        id="serviceError"
+                        aria-live="polite"
+                      ></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message (optional)</label>
+                      <textarea
+                        id="message"
+                        rows="3"
+                        placeholder="Tell us about your pet's needs..."
+                      ></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn--primary btn--full">
+                    Book Appointment
+                  </button>
+                </form>
+                <p class="form-reassurance">
+                  We'll get in touch shortly to confirm your appointment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="footer-logo">DOK<span>VET</span></a>
+            <p class="footer-tagline">Trusted veterinary care in Kottakkal</p>
+            <div
+              class="footer-social"
+              role="group"
+              aria-label="Social media links"
+            >
+              <a
+                href="https://www.instagram.com/dokvet_petclinic_kottakkal?igsh=MXV5a3VsOXJmZTEycg=="
+                class="footer-social__icon"
+                aria-label="Follow us on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/p/Dokvet-Pet-Clinic-Kottakkal-100086400640278/"
+                class="footer-social__icon"
+                aria-label="Like us on Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/919656681000"
+                class="footer-social__icon"
+                aria-label="Chat with us on WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links-col">
+            <h3 class="footer-col__heading">Quick Links</h3>
+            <nav aria-label="Footer quick links">
+              <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pet-essentials">Pet Essentials</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="copyright-year">2026</span> DOKVET Pet Clinic &
+            Grooming Parlour. All Rights Reserved.</span
+          >
+          <div class="footer-bottom__legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/919656681000"
+      class="float-wa"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="white">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"
+        />
+      </svg>
+      <span class="wa-text">Message us</span>
+    </a>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
